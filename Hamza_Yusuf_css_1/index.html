@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laurea University – Job Application</title>
+
+  <!-- INTERNAL CSS (one small ruleset) -->
+  <style>
+    /* Internal CSS: light layout helpers */
+    header, footer { background-color: #eef0f4; padding: 10px; }
+    section { margin-top: 20px; }
+  </style>
+
+  <!-- EXTERNAL CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1 id="main-title" class="title">LAUREA UNIVERSITY OF APPLIED SCIENCES</h1>
+    <nav>
+      <a href="#form">Application Form</a>
+      <a href="#quote">Quote</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="form" class="form-section">
+      <article>
+        <h2>Student Assistant Job Application</h2>
+
+        <!-- Job application form -->
+        <form action="/submit" method="POST" autocomplete="on">
+          <!-- Descendant combinator target: .form-section label -->
+          <label for="fullname">Full Name:</label>
+          <input id="fullname" name="fullname" type="text" placeholder="Jane Student" required minlength="3" maxlength="50" />
+          <br />
+
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" placeholder="you@student.laurea.fi" required />
+          <br />
+
+          <label for="password">Password:</label>
+          <input id="password" name="password" type="password" required />
+          <br />
+
+          <label for="experience">Years of Experience:</label>
+          <input id="experience" name="experience" type="number" min="0" max="10" />
+          <br />
+
+          <label for="salary">Expected Salary Range:</label>
+          <!-- The oninput just updates the number beside the slider (not graded JS, only for UX) -->
+          <input id="salary" name="salary" type="range" min="500" max="5000" step="100" value="2000"
+                 oninput="document.getElementById('salaryValue').textContent = this.value" />
+          <span id="salaryValue">2000</span> € / month
+          <br /><br />
+
+          <label>Job Preferences:</label>
+          <input type="checkbox" name="preference" value="remote" id="pref-remote" />
+          <label for="pref-remote">Remote Work</label><br />
+          <input type="checkbox" name="preference" value="oncampus" id="pref-campus" />
+          <label for="pref-campus">On Campus</label><br />
+          <input type="checkbox" name="preference" value="parttime" id="pref-parttime" />
+          <label for="pref-parttime">Part-Time</label>
+          <br /><br />
+
+          <label>Job Type:</label>
+          <input type="radio" name="jobtype" id="jt-assistant" value="studentassistant" />
+          <label for="jt-assistant">Student Assistant</label><br />
+          <input type="radio" name="jobtype" id="jt-intern" value="internship" />
+          <label for="jt-intern">Internship</label>
+          <br /><br />
+
+          <label for="department">Department:</label>
+          <select id="department" name="department">
+            <option value="it">Information Technology</option>
+            <option value="business">Business Management</option>
+            <option value="nursing">Nursing</option>
+            <option value="social">Social Services</option>
+          </select>
+          <br /><br />
+
+          <label for="campus">Campus Preference:</label>
+          <input id="campus" name="campus" list="campuses" />
+          <datalist id="campuses">
+            <option value="Leppävaara"></option>
+            <option value="Tikkurila"></option>
+            <option value="Hyvinkää"></option>
+            <option value="Lohja"></option>
+          </datalist>
+          <br />
+
+          <label for="coverletter">Motivation Letter:</label>
+          <textarea id="coverletter" name="coverletter" rows="5" cols="40" placeholder="Why would you like to work with us?"></textarea>
+          <br />
+
+          <label for="jobid">Job position ID (disabled):</label>
+          <input id="jobid" type="text" value="LAUREAREF123" disabled />
+          <br />
+
+          <label for="appid">Application ID (readonly):</label>
+          <input id="appid" type="text" value="LAU2025APP" readonly />
+          <br /><br />
+
+          <input type="submit" value="Send Application" aria-label="Submit Job Application" />
+        </form>
+      </article>
+    </section>
+
+    <aside>
+      <!-- ID selector example -->
+      <blockquote id="quote" cite="https://en.wikiquote.org/wiki/Eleanor_Roosevelt">
+        “The future belongs to those who believe in the beauty of their dreams.” — Eleanor Roosevelt
+      </blockquote>
+    </aside>
+
+    <section>
+      <!-- Multiple class selector example: .green.bold -->
+      <h2 class="green bold">Checklist</h2>
+      <ul class="main-list">
+        <li>Bring updated CV</li>
+        <li>Prepare references</li>
+        <li>Check Laurea career portal</li>
+      </ul>
+    </section>
+
+    <section>
+      <!-- INLINE CSS: one ruleset applied directly -->
+      <!-- Comment for teacher: this inline CSS centers the paragraph -->
+      <p style="text-align:center; margin: 20px 0;">
+        For more information, visit
+        <a href="https://www.laurea.fi/en/laurea/as-an-employer/" class="visit-laurea">Laurea UAS careers</a>.
+      </p>
+
+      <img src="laurea-logo.png" alt="Laurea Logo">
+
+           
+    </section>
+
+    <!-- Visibility demo: this logo is hidden via CSS -->
+    <section>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Laurea_University_logo.svg"
+           class="hidden-logo" alt="Laurea Logo (hidden)" />
+    </section>
+  </main>
+
+  <footer class="menu">
+    <p>© 2025 Laurea University of Applied Sciences. All rights reserved.</p>
+  </footer>
+
+  <!-- Simple date comment to show HTML comments -->
+  <!-- Date updated: 28.11.2025 -->
+</body>
+</html>

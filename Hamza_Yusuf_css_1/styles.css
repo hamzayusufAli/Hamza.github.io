@@ -1,0 +1,192 @@
+/* ============== 1. RESET DEFAULTS ============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============== 2. SELECTORS =================== */
+
+/* -- 2.1 Type selectors -- */
+h1 {
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+form {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+}
+p {                       /* type selector for paragraphs */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.6;
+}
+nav { text-align: center; margin: 15px 0; }
+footer { text-align: center; margin-top: 20px; padding: 10px 0; }
+
+/* -- 2.2 Class selector -- */
+.form-section {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* -- 2.3 ID selector -- */
+#main-title {
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+/* -- 2.4 Multiple class selectors -- */
+.green.bold {            /* targets: <h2 class="green bold"> */
+  color: green;
+  font-weight: bold;
+}
+
+/* -- 2.5 Attribute selectors -- */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  border: 1px solid #ccc;
+  margin: 5px 1px;              /* margin shorthand */
+  padding: 5px 10px;            /* padding shorthand */
+}
+img[src*="laurea"] {            /* e.g., laurea-logo.png */
+  border: 1px solid #004080;
+  border-radius: 20px;
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* -- 2.6 Descendant combinators -- */
+.form-section label {           /* label is descendant of .form-section */
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+section .main-list {            /* ul.main-list inside any section */
+  list-style-type: square;
+  background: #f1f8ff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+section .main-list li {         /* li is descendant of section .main-list */
+  margin-left: 20px;
+  color: #444;
+  padding: 5px 0;
+}
+
+/* -- 2.7 Multiple selectors -- */
+h1, h2, .menu {
+  color: #222;
+  font-family: Verdana, sans-serif;
+}
+
+/* -- 2.8 Chaining (type + class) -- */
+h1.title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.5em;
+}
+
+/* -- 2.9 Pseudo-classes -- */
+a:hover {
+  opacity: 0.7;
+  transform: scale(1.04);       /* simple hover effect */
+  transition: all 0.3s ease;
+}
+a:visited { color: #b00; }
+input:focus {
+  border-color: #004080;
+  outline: none;
+  background-color: #e6f5ff;
+}
+input:disabled {
+  background: #eee;
+  
+  color: #999;
+}
+input[type="submit"]:active,
+button:active {
+  transform: scale(0.98);
+}
+
+/* (extra) type + attribute + pseudo-class combined */
+input[type="submit"] {          /* styling for the submit button */
+  background-color: #004080;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {    /* hover only on the button */
+  background: #1e90ff;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+/* ============== 3. VISUAL RULES ================= */
+
+/* body visual rules (with !important + background-image examples) */
+body {
+  background-color: #fafafa;
+  color: #333;
+  opacity: 0.98;
+  background-image: none !important;   /* Example 1 */
+  background-image: url('https://images.seeklogo.com/logo-png/18/1/cs33-logo-png_seeklogo-166678.png'); /* Example 2 */
+  /* Note: Example 1 overrides Example 2 because of !important.
+     Remove the first line to see the background image appear. */
+}
+
+/* textarea shows width/height/min/max/overflow from box model */
+textarea {
+  width: 100%;
+  min-width: 180px;
+  min-height: 120px;
+  max-height: 300px;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+/* Blockquote margins & paddings using longhand props */
+#quote {
+  /* margin (outer spacing) on four sides */
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+
+  /* padding (inner spacing) on four sides */
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+/* visibility example: hide a second logo placed above the footer */
+.hidden-logo {
+  visibility: hidden;
+}
