@@ -111,27 +111,28 @@ figcaption{
 </div>
 /* Floating box (teal) */
 .floating-box{
-  display: block;                 /* no float */
-  width: max-content;             /* shrink to text */
-  padding: 10px 14px;
-  margin: 24px auto 12px;         /* centered */
-  border-radius: 6px;
-  background-color: rgba(0,128,128,.85);
-  color: #fff;
-  text-align: center;
-  box-shadow: 0 6px 14px rgba(0,0,0,.15);
-  clear: both;                    /* avoid overlap from floated items */
+  display:block;
+  width:max-content;
+  padding:10px 14px;
+  margin:24px auto 12px;
+  border-radius:6px;
+  background-color:rgba(0,128,128,.85);
+  color:#fff;
+  text-align:center;
+  box-shadow:0 6px 14px rgba(0,0,0,.15);
+  clear:both;
 }
 
-/* Clear (light-blue) info bar */
+/* Clear info bar (light blue) */
 .clear-box{
-  display: block;
-  max-width: 680px;
-  padding: 10px 16px;
-  margin: 12px auto 32px;         /* centered with space above/below */
-  border-radius: 6px;
-  background-color: hsl(200 70% 70% / .8);
-  color: #333;
-  text-align: center;
-  clear: both;                    /* ensures it sits below the stack */
+  display:block;
+  max-width:680px;
+  padding:10px 16px;
+  margin:12px auto 32px;
+  border-radius:6px;
+  background-color:hsl(200 70% 70% / .8);
+  color:#333;
+  text-align:center;
+  clear:both;
 }
+
