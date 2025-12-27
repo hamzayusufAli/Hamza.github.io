@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Cyber Notes | Home</title>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+
+  <meta name="description" content="A responsive Bootstrap 5 blog-style website for a web development final project.">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="assets/favicon.svg" alt="Site logo" width="28" height="28" class="rounded">
+      <span>Cyber Notes</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <button class="btn btn-outline-light ms-lg-3 mt-2 mt-lg-0" data-bs-toggle="modal" data-bs-target="#subscribeModal" type="button">
+        Subscribe
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+<header class="hero">
+  <div class="container py-5">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <p class="badge text-bg-primary mb-3">Bootstrap 5 + Custom CSS</p>
+        <h1 class="display-5 fw-bold">Cyber Notes &amp; Student Life</h1>
+        <p class="lead text-secondary">
+          A simple blog layout to showcase what I learned during this course about web development focusing on Html and css and bootstarp.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-primary" href="#latest">See latest posts</a>
+          <a class="btn btn-outline-secondary" href="about.html">About the author</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img class="img-fluid rounded-4 shadow-sm" src="assets/hero.svg"
+             alt="Decorative hero image with modern gradient shapes and text about Cyber Notes">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container my-5" id="latest">
+  <div class="row g-4">
+    <div class="col-lg-8">
+
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb mb-4">
+          <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+      </nav>
+
+      <h2 class="h3 mb-3">Latest posts</h2>
+
+      <article class="card post-card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="assets/placeholder.svg" class="img-fluid h-100 object-fit-cover rounded-start"
+                 alt="Placeholder image for blog post thumbnail">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="text-secondary small mb-2">Cybersecurity • 5 min read</p>
+              <h3 class="card-title h5">My first week learning web security basics</h3>
+              <p class="card-text text-secondary">
+                A beginner friendly post about HTTPS, strong passwords, and small habits that improve security.
+              </p>
+              <a class="btn btn-sm btn-primary" href="post1.html" aria-label="Read post: My first week learning web security basics">Read more</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card post-card mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="assets/placeholder.svg" class="img-fluid h-100 object-fit-cover rounded-start"
+                 alt="Placeholder image for blog post thumbnail">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="text-secondary small mb-2">Web Development • 6 min read</p>
+              <h3 class="card-title h5">Bootstrap components that made my life easier</h3>
+              <p class="card-text text-secondary">
+                Navbar, cards, grid system, and a modal quick wins for building a clean responsive layout.
+              </p>
+              <a class="btn btn-sm btn-primary" href="post2.html" aria-label="Read post: Bootstrap components that made my life easier">Read more</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <section class="card p-4">
+        <h2 class="h5">Quick highlight</h2>
+        <ul class="mb-0">
+          <li>Minimum 3 HTML pages (Home, About, Contact) + 2 post pages.</li>
+          <li>External CSS file (<code>styles.css</code>) for custom styling.</li>
+          <li>Responsive layout using Bootstrap grid and components.</li>
+          <li>Accessibility basics: alt text, labels, focus styles, aria-labels.</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <aside class="col-lg-4">
+      <div class="card p-4 mb-4">
+        <h2 class="h5">About</h2>
+        <p class="text-secondary mb-3">
+          Hi! I’m a first-year student learning web development and cybersecurity. This site is my final project.
+        </p>
+        <a class="btn btn-outline-secondary btn-sm" href="about.html">Read more</a>
+      </div>
+
+      <div class="card p-4 mb-4">
+        <h2 class="h5">Categories</h2>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge text-bg-light border">Cybersecurity</span>
+          <span class="badge text-bg-light border">Web Dev</span>
+          <span class="badge text-bg-light border">Student life</span>
+          <span class="badge text-bg-light border">Tips</span>
+        </div>
+      </div>
+
+      <div class="card p-4">
+        <h2 class="h5">Newsletter (demo)</h2>
+        <form class="needs-validation" novalidate>
+          <label for="emailHome" class="form-label">Email</label>
+          <input id="emailHome" type="email" class="form-control" placeholder="name@example.com" required>
+          <div class="invalid-feedback">Please enter a valid email.</div>
+          <button class="btn btn-primary w-100 mt-3" type="submit">Join</button>
+          <p class="text-secondary small mt-3 mb-0">No backend, just a UI example.</p>
+        </form>
+      </div>
+    </aside>
+  </div>
+</main>
+
+
+<footer class="site-footer mt-5">
+  <div class="container py-5">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-6">
+        <h2 class="h5 mb-3">Cyber Notes</h2>
+        <p class="text-secondary mb-0">
+          A small student style blog built with Bootstrap 5.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h2 class="h5 mb-3">Social links</h2>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-sm btn-outline-secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="Open LinkedIn">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a class="btn btn-sm btn-outline-secondary" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Open Instagram">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+          <a class="btn btn-sm btn-outline-secondary" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Open Facebook">
+            <i class="fa-brands fa-facebook"></i> Facebook
+          </a>
+          <a class="btn btn-sm btn-outline-secondary" href="https://github.com/" target="_blank" rel="noopener" aria-label="Open GitHub">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-secondary-subtle my-4">
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between gap-2">
+      <small class="text-secondary">© <span id="year"></span> Cyber Notes. Built for Web Site Development final project.</small>
+    </div>
+  </div>
+</footer>
+
+<!-- Subscribe modal -->
+<div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="subscribeModalLabel">Subscribe</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="subEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="subEmail" placeholder="name@example.com" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+          <p class="text-secondary small mt-3 mb-0">This is a demo form (no backend).</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Bootstrap validation demo
+  (() => {
+    'use strict';
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

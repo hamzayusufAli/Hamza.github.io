@@ -1,0 +1,117 @@
+:root{
+  --bg-soft: #0b1220;
+  --card-radius: 1.25rem;
+}
+
+body{
+  background: #0a0f1a;
+  color: #e9ecef;
+}
+
+a{ text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.hero{
+  background: radial-gradient(1200px 500px at 10% 10%, rgba(13,110,253,0.25), transparent),
+              radial-gradient(900px 450px at 90% 60%, rgba(32,201,151,0.20), transparent);
+}
+
+.navbar-brand span{
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.card{
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--card-radius);
+  background: rgba(255,255,255,0.03);
+}
+
+.post-card .card-body{
+  padding: 1.25rem;
+}
+
+.object-fit-cover{
+  object-fit: cover;
+}
+
+.site-footer{
+  background: rgba(255,255,255,0.02);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.breadcrumb{
+  --bs-breadcrumb-divider: "›";
+}
+
+.breadcrumb .breadcrumb-item a{
+  color: rgba(255,255,255,0.75);
+}
+.breadcrumb .breadcrumb-item.active{
+  color: rgba(255,255,255,0.9);
+}
+
+/* Timeline (About page) */
+.timeline{
+  display: grid;
+  gap: 1rem;
+}
+.timeline-item{
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+.timeline-dot{
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  margin-top: 0.35rem;
+  background: linear-gradient(90deg, #0d6efd, #20c997);
+  box-shadow: 0 0 0 4px rgba(13,110,253,0.15);
+}
+
+/* Accessibility: stronger focus outline */
+:focus-visible{
+  outline: 3px solid rgba(13,110,253,0.8);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Make text readable on dark background */
+.text-secondary , .text-muted{
+  color: rgba(255,255,255,0.88) !important;
+}
+/* Force headings/labels to be fully visible */
+h1,h2,h3,h4,h5,h6,
+.card-title,.card-subtitle,
+.form-label{
+  opacity: 1 !important;
+  color: rgba(255,255,255,0.92) !important;
+}
+
+.btn-outline-secondary{
+  border-color: rgba(233,236,239,0.35);
+  color: rgba(233,236,239,0.9);
+}
+.btn-outline-secondary:hover{
+  background: rgba(233,236,239,0.12);
+}
+
+/* Slightly nicer form on dark bg */
+.form-control, .form-select{
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.15);
+  color: #e9ecef;
+}
+.form-control::placeholder{ color: rgba(233,236,239,0.5); }
+.form-control:focus, .form-select:focus{
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(13,110,253,0.6);
+  box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
+
+.modal-content{
+  background: #0b1220;
+  border: 1px solid rgba(255,255,255,0.12);
+}
