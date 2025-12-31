@@ -1,0 +1,25 @@
+/* Custom styles for Bootstrap assignment */
+
+body {
+  background-color: #cacfdd;
+}
+
+h4 {
+  margin-top: 20px;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.toast {
+  max-width: 300px;
+}
+
+button {
+  border-radius: 10px;
+}
